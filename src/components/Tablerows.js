@@ -4,7 +4,7 @@ function Tablerow(props) {
     return (
             <tr>
                 <td className="px-6 py-4 whitespace-nowrap">
-                    <img src={props.picture} alt = {props.fullname}></img>
+                    <img src={props.picture} alt = {props.name}></img>
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">
                     {props.firstName}

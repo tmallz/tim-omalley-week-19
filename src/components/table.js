@@ -31,7 +31,24 @@ function Table(props) {
                                 </tr>
                             </thead>
                             <tbody className="bg-white divide-y divide-gray-200">
-                                <Tablerows />
+                                {props.employeeList.map((employee) => {
+                                    return <Tablerows 
+                                        key = {employee.id.value}
+                                        name = {employee.name.first + employee.name.last}
+                                        firstName = {employee.name.first}
+                                        lastName = {employee.name.last}
+                                        email = {employee.email}
+                                        cell = {employee.cell}
+                                        picture = {employee.picture.thumbnail}
+                                        address = {
+                                            employee.location.street.number + ' ' +
+                                            employee.location.street.name + ' ' +
+                                            employee.location.city + ', ' +
+                                            employee.location.state + ' ' +
+                                            employee.location.postcode
+                                        }
+                                    />
+                                })}
                             </tbody>
                         </table>
                     </div>
