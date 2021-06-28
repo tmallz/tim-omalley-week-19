@@ -29,6 +29,8 @@ class Directory extends React.Component {
         this.setState({employeeFilter: employeeFilter});
     } 
 
+    
+
     render(){
         return(
             <div>
