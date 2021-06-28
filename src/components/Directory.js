@@ -1,6 +1,7 @@
 import React from "react";
 import API from "../utils/API";
-import Table from "./Table";
+import Searchbar from "./Searchbar";
+import Table from "./Table"; 
 
 
 class Directory extends React.Component {
@@ -21,6 +22,8 @@ class Directory extends React.Component {
     render(){
         return(
             <div>
+                <h1 className = "text-3xl text-center px-5 py-5">List of Employees</h1>
+                <Searchbar />
                 <Table/>
             </div>
         )
