@@ -13,6 +13,7 @@ class Directory extends React.Component {
 
     componentDidMount = () => {
         API.getEmployees().then(res =>{
+            console.log('hit aapi call')
             this.setState({employeeList: res.data.results});
             this.setState({employeeFilter: res.data.results})
         })
@@ -24,7 +25,7 @@ class Directory extends React.Component {
             <div>
                 <h1 className = "text-3xl text-center px-5 py-5">List of Employees</h1>
                 <Searchbar />
-                <Table/>
+                <Table employeeList={this.state.employeeFilter}/>
             </div>
         )
     }

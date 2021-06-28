@@ -1,4 +1,5 @@
 import React from "react";
+import Tablerows from "./Tablerows";
 
 function Table(props) {
     return (
@@ -30,26 +31,7 @@ function Table(props) {
                                 </tr>
                             </thead>
                             <tbody className="bg-white divide-y divide-gray-200">
-                                <tr>
-                                <td className="px-6 py-4 whitespace-nowrap">
-                                    image
-                                </td>
-                                <td className="px-6 py-4 whitespace-nowrap">
-                                    Jane
-                                </td>
-                                <td className="px-6 py-4 whitespace-nowrap">
-                                    Doe
-                                </td>
-                                <td className="px-6 py-4 whitespace-nowrap text-sm text-blue-500">
-                                    jane@doe.com
-                                </td>
-                                <td className="px-6 py-4 whitespace-nowrap">
-                                    1-234-567-8910
-                                </td>
-                                <td className="px-6 py-4 whitespace-nowrap">
-                                    411 E South St. Elmhurst Il, 60126
-                                </td>
-                                </tr>
+                                <Tablerows />
                             </tbody>
                         </table>
                     </div>
@@ -58,5 +40,4 @@ function Table(props) {
         </div>
     );
 }
-
-    export default Table;
+export default Table;
